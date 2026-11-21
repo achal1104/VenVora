@@ -136,3 +136,10 @@ html,body{overflow-x:clip;max-width:100%}img{max-width:100%}
 @media(max-width:400px){.filters,.price,.stats{grid-template-columns:1fr}.fc.l{transform:translateX(-88px) rotate(-8deg)}.fc.r{transform:translateX(88px) rotate(8deg)}}
 @media(hover:none){.btn:hover,.hc:hover,.cc:hover,.step:hover,.pc:hover,.tile:hover{transform:none}}
 @media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+.tile.pf{position:relative;overflow:hidden;padding:0;align-items:stretch}
+.tile.pf video,.tile.pf img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tile.pf .tl{position:absolute;left:0;right:0;bottom:0;padding:26px 10px 10px;background:linear-gradient(transparent,#000c);z-index:1;pointer-events:none}
+.tile.pf .lk{position:absolute;inset:0;display:grid;place-items:center;font-weight:700;background:#0004;z-index:1}
+.tile.pf .rm{position:absolute;top:8px;right:8px;z-index:3;width:28px;height:28px;border-radius:50%;border:0;background:#000b;color:#fff;font-size:18px;line-height:1}
+.tile.pf .rm:hover{background:var(--red)}
