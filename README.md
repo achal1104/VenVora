@@ -1,4 +1,4 @@
-# Collably – Creator & Brand Collaboration (React + Vite)
+# VenVora – Creator & Brand Collaboration (React + Vite)
 npm install
 npm run dev      # http://localhost:5173
 npm run build
