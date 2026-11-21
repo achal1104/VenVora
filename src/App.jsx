@@ -60,7 +60,7 @@ const downloadAgreementPdf = (f, sig, st) => {
 };
 function Nav({page,go,open,setOpen}){const L=[["home","Home"],["creators","For Creators"],["brands","For Brands"],["explore","Explore Creators"],["editors","Editors"],["how","How It Works"],["contact","Contact"]];
 return <div className="nav"><div className="navin"><div className="logo" onClick={()=>go("home")}><i>C</i>Collably</div>
-<div className={"links "+(open?"open":"")}>{L.map(([k,t])=><a key={k} className={page===k?"on":""} onClick={()=>{setOpen(false);k==="creators"?go("joincreator"):k==="brands"?go("joinbrand"):k==="contact"?document.getElementById("contact")?.scrollIntoView():go(k==="how"?"home":k,k==="how"?"how":null)}}>{t}</a>)}</div>
+<div className={"links "+(open?"open":"")}>{L.map(([k,t])=><a key={k} className={page===k?"on":""} onClick={()=>{setOpen(false);k==="creators"?go("joincreator"):k==="brands"?go("joinbrand"):k==="contact"?document.getElementById("contact")?.scrollIntoView():go(k==="how"?"home":k,k==="how"?"how":null)}}>{t}</a>)}<a className="mnav" onClick={()=>{setOpen(false);go("joinbrand")}}>Login</a><a className="mnav" onClick={()=>{setOpen(false);go("joincreator")}}>Join as Creator</a><a className="mnav" onClick={()=>{setOpen(false);go("joinbrand")}}>Register as Brand</a><a className="mnav" onClick={()=>{setOpen(false);go("joineditor")}}>Join as Editor</a></div>
 <button className="btn hide" onClick={()=>go("joinbrand")}>Login</button><button className="btn red hide" onClick={()=>go("joincreator")}>Join as Creator</button><button className="btn hide" onClick={()=>go("joinbrand")}>Register as Brand</button>
 <button className="btn burger" onClick={()=>setOpen(!open)}>☰</button></div></div>}
 
